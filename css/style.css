@@ -81,12 +81,19 @@ main {
     margin-bottom: 60px;
 }
 
+.left-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
 .profile-pic {
     width: 220px;
     height: 220px;
     border-radius: 50%;
     object-fit: cover;
-    border: 5px solid var(--border);
     flex-shrink: 0;
     transition: transform 0.3s ease;
 }
@@ -98,6 +105,7 @@ main {
     border-radius: 50%;
     filter: grayscale(100%);
     transition: filter 0.5s ease-in-out;
+    border: 5px solid var(--soft-blue);
 }
 
 .profile-pic:hover img {
@@ -108,12 +116,40 @@ main {
     transform: scale(1.03); 
 }
 
-.title { display: flex; gap: 20px; }
-.title h1 { font-family: "Playfair Display", serif; font-weight: 500; font-size: 2.2rem; color: var(--univ-blue); }
-.title span { font-weight: 700; }
-.role { color: var(--soft-blue); font-weight: 500; font-size: 1.2rem; }
-.affiliation { font-size: 1rem; color: var(--text-muted); margin-bottom: 20px; }
+.intro h1 { font-weight: 500; font-size: 2.2rem; color: var(--univ-blue); }
+.intro span { font-weight: 700; }
+.role { color: var(--soft-blue); font-weight: 500; font-size: 1.1rem; }
+.affiliation { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 10px; }
 .text { margin-bottom: 20px; text-align: justify; color: var(--text-main); }
+
+.references, .interests {
+    margin-bottom: 10px;
+}
+
+h3 { text-transform: uppercase; font-size: 1rem; color: var(--univ-blue);}
+
+.blue-item {
+    background-color: var(--univ-blue);
+    color: white;
+}
+
+.grey-item {
+    background-color: var(--border);
+    color: var(--univ-blue)
+}
+
+.item {
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.item:hover {
+    font-size: 0.92rem;
+}
+
 
 .text.italic {
     color: var(--text-muted);
@@ -131,6 +167,12 @@ main {
     font-weight: 700;
     text-decoration: none;
     border-bottom: 2px solid var(--soft-blue);
+    font-size: 1rem;
+    transition: font-size 0.3s ease;
+}
+
+.cv-link:hover {
+    font-size: 1.02rem;
 }
 
 .contact {
@@ -155,6 +197,7 @@ main {
 .social-links {
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: row;
     gap: 10px;
     margin-top: 5px;
@@ -176,6 +219,12 @@ main {
 }
 
 .logos { display: flex; gap: 30px; align-items: center; }
+.logos img {
+    transition: transform 0.3s ease;
+}
+.logos img:hover {
+    transform: scale(1.05);
+}
 .univ-logo { height: 45px; }
 .lem-logo { height: 55px; }
 
@@ -189,7 +238,7 @@ footer {
 }
 
 .made-with {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     margin-top: 10px;
 }
 
